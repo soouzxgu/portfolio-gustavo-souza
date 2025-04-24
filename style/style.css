@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-
-
 *{
     margin: 0;
     padding: 0;
@@ -14,13 +11,14 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: var(--verde-escuro);
 }
 
 :root{
-    --verde-escuro: #3c1c57;
-    --verde: #22053a;
+    --verde-escuro: #111111;
+    --verde: #111111;;
     --orange: #000000;
-    --degrade--btn: linear-gradient(#fe9611, #ff5c00);
+    --degrade--btn: linear-gradient(#3869d1, #053872);
     --degrade--btn--header: linear-gradient(#020024, #090979, #00d4ff);
     --color-p: #a1a1a1;
     --color-p-2: #868585;
@@ -33,9 +31,9 @@ body{
 
 header{
     background-color: var(--verde);
-    position: fixed;
     width: 100%;
     z-index: 1000;
+    position: fixed;
 
 }
 
@@ -51,24 +49,23 @@ section, footer{
     padding: 2.7rem 0;
 }
 
-.btn-gradient{
+/* .btn-gradient{
     padding: 10px 25px;
     color: white;
     font-weight: bolder;
     border: none;
     cursor: pointer;
-    background-color: #ff5c00;
+    background-color: #1e61a0;
     border-radius: 5px;
-}
+} */
 
 .btn-gradient-2{
-    margin-top: 30px;
     padding: 10px 25px;
     color: white;
     font-weight: bolder;
     border: none;
     cursor: pointer;
-    background-color: #fe9611;
+    background-color: #1e61a0;
     border-radius: 10px;
 }
 
@@ -76,7 +73,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 1px 0;
     flex-direction: row;
 
 }
@@ -84,7 +81,7 @@ nav{
 .logo a{
     font-size: 30px;
     font-weight: bolder;
-    color: white;
+    color: #1e61a0;;
     margin: 0 50px;
 }
 
@@ -93,18 +90,31 @@ nav{
     align-items: center;
 }
 
-.menu li{
-    padding: 0 30px;
-    font-size: 18px;
+.menu li {
+    padding: 10px;
+    font-size: 16px;
+    margin: 20px;
     font-weight: 500;
+    color: var(--color-p);
+    transition: 0.2ms;
 }
 
-.menu li a{
+.menu li:hover{
+    transform: scale(1.06);
     color: white;
 }
 
+.menu li a{
+    color: var(--color-p);
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+
 .menu li button{
-    font-size: 15px;
+    font-size: 16px;
 }
 
 
@@ -125,13 +135,14 @@ main .container{
 .main-text h1{
     font-size: 4rem;
     line-height: 1;
+    margin-top: 100px;
 }
 
 .main-text span{
     font-size: 4rem;
     line-height: 1;
     font-weight: bolder;
-    color: #fe9611;
+    color:#1e61a0;
 }
 
 .main-text h2{
@@ -155,178 +166,115 @@ main .container{
 
 /* end main */
 
-/* section results */
-/* .results{
-    background-color: var(--orange);
-
+/* skills section */
+.diferences {
+    width: 100%;
+    margin-top: 50px;
+    background-color: var(--verde-escuro);
+    padding: 2.7rem 0;
 }
 
-.results .container{
+.diferences .container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: stretch;
+    align-content: space-around;
+    gap: 50px;
+
 }
 
-.results .results-text{
-    color: white;
-    font-size: 1.6rem;
-    font-weight: 600;
-    width: 50%;
+/* Container dos cards (esquerda) */
+.diferences .cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: space-between;
+        align-content: center;
+    
 }
 
-.results .results-number{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-
-.results .results-number p{
-    text-align: center;
-    margin: 0 30px;
-    font-size: 20px;
-}
-
-.results .results-number p span{
-    font-size: 30px;
-    font-weight: 600;
-}
-/* end section results */
-
-/* skills section*/
-.diferences .container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.title-container {
-    text-align: center;
-    margin: 50px auto;
-    width: 100%;        /* Garante que ocupe a largura total */
-    padding: 20px;
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--verde-escuro);
-}
-
-/* card */
-.diferences .card{
-    width: 30%;
+/* Estilo dos cards */
+.diferences .card {
+    width: 100%;
     cursor: pointer;
     padding: 30px;
     border-radius: 15px;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    font-size: 18px;
-}
-
-.diferences .card .card-img{
-    display: flex;          /* Ativa Flexbox */
-    justify-content: center; /* Centraliza as imagens horizontalmente */            /* Adiciona um espaçamento entre as imagens */
-    width: 100%;
-    margin-top: 10px
-}
-
-.diferences .card:hover{
-    box-shadow: 0px 10px 67px 1px #5a5a5a85;
+    transition: all 0.3s ease;
     color: white;
-    background-color: var(--verde-escuro);
+    border: 1px solid #1e61a0;
+    background-color: rgba(30, 97, 160, 0.1);
 }
 
-.diferences .card img{
-    display: flex;
-    margin: 10px;
-    width: 60px;
-    transition: 0.3s; /* Adiciona transição para suavizar a mudança */
+.diferences .card:hover {
+    background-color: #1e61a0;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* .diferences .card:hover img {
-    filter: brightness(0) invert(1);Muda a cor da imagem para branco 
-}*/
-
-
-.diferences .card .title{
-    margin: 30px auto;
+.diferences .card .title {
+    margin-bottom: 15px;
     font-weight: 600;
-    text-align: center;
+    font-size: 24px;
 }
 
-/* card end */
-/* end diferences section */
-
-
-/* section home */
-
-.home{
-    background-color: var(--verde-escuro);
-    padding: 20px;
-    margin-top: 10%;
+.diferences .card p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.home .container{
-    display: flex;
-    align-items: center;
-    margin: 50px auto;
-    background: var(--verde-escuro);
-    width: 100%;
+.diferences .card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #1e61a0;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.home .img-home{
-    width: 70%;
-}
-
-.home .img-home img{
-    width: 100%;
-    border-radius: 30px;
-}
-
-.home .home-text{
-    width: 60%;
-    padding-left: 90px;
+.diferences .card:hover a {
     color: white;
+    text-decoration: underline;
 }
 
-.home .home-text h2{
-    font-size: 2.5em;
-    line-height: 1.3;
-}
-
-.home .home-text p{
-    margin: 20px 0;
+/* Sobre Mim (direita) */
+.diferences .home-text {
+    width: 100%;
     color: white;
-    text-align: justify;
+    align-self: center;
+    margin-left: 100px;
 }
 
-.home .home-text p b{
-    color: black;
-    font-size: 20px;
+.diferences .home-text h2{
+    font-size: 2.5rem;
+    line-height: 3;
 }
 
-/* end home section */
+.diferences .home-text p{
+    font-size: 16px;
+    line-height: 1.8rem;
+}
 
+.diferences button{
+    padding: 20px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+}
 /* places - card */
 
 .places .title-places{
-    margin-top: 50px;
+    margin-top: 100px;
     font-size: 24px;
     font-weight: 600;
     color: var(--verde-escuro);
 }
 
-.places h2{
-    text-align: center;   /* Alinhamento à esquerda */
-    margin-bottom: 50px; /* Espaçamento abaixo do título */
-    width: 100%;        /* Garante que ocupe a largura total */
-    max-width: 1200px;  /* Opcional: alinha com o container principal */
-    margin-left: auto;  /* Centraliza horizontalmente */
-    margin-right: auto;
-    padding: 0 20px;
-    margin-top: 30px;
+.places h2{   /* Alinhamento à esquerda */ /* Espaçamento abaixo do título */
+    width: 100%;        /* Garante que ocupe a largura total */ /* Opcional: alinha com o container principal */
+
     font-size: 40px;
     font-weight: 700;
-    color: var(--verde-escuro);
+    color: #053872;
 }
 
 /* card */
@@ -334,7 +282,7 @@ main .container{
 .places .card-places{
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .places .card-places .card-items{
@@ -353,8 +301,8 @@ main .container{
 }
 
 .places .card-items:hover {
-    background-color: rgba(0,0,0,0.6);
-    color: white; /* Overlay mais escuro no hover */
+    /* background-color: rgba(0,0,0,6); */
+    transform: scale(1.06);
 }
 
 .places .card-places .card-items img {
@@ -386,21 +334,6 @@ main .container{
     transition: 0.2s;
 }
 
-.places .card-items .home-contact:hover{
-    color: white;
-}
-
-/* .places .card-items button{
-    padding: 10px 25px;
-    color: white;
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-    background-color: var(--verde-escuro);
-    border-radius: 5px;
-    transition: 0.3s;
-} */
-
 /* end places - card */
 
 
@@ -417,7 +350,8 @@ main .container{
     border-radius: 20px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('./img/background-newsletter.png');
+    color: white;
+    /* background-image: url('./img/background-newsletter.png'); */
 }
 
 .newslestter .box-newsletter h2{
@@ -430,24 +364,33 @@ main .container{
 }
 
 .newslestter .box-newsletter input{
-    width: 35%;
+    margin-top: 50px;
+    width: 40%;
     padding: 15px;
     border-radius: 15px;
     border: none;
     outline: none;
-    background-color: #fdfdd3;
+    background-color: #ffffff;
+
+}
+
+.newslestter .box-newsletter .message input{
+    width: 80%;
+    padding: 100px 15px; 
+    margin-top: 10px; /* Mantive 100px vertical mas 15px horizontal */
+  /* Espaço extra abaixo da mensagem */
 
 }
 
 .newslestter .box-newsletter button{
-    padding: 15px;
-    margin: 5px;
+    padding: 15px 40px;
+    margin: 20px;
     color: white;
     font-weight: bolder;
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: var(--verde-escuro);
+    background-color: var(--verde);
     border-radius: 15px;
     transition: 0.3s;
 }
