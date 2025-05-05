@@ -15,7 +15,10 @@
 
 .menu-icon {
      display: block;
+<<<<<<< HEAD
      margin: 10px;
+=======
+>>>>>>> 7f3d34091ba5f01dd9579db80a8c7dd764f7c30a
 }
  
 .menu {
@@ -34,7 +37,11 @@
 .menu li {
     font-size: 20px;
     font-weight: bold;
+<<<<<<< HEAD
     margin: 10px 0;
+=======
+    margin: 20px 0;
+>>>>>>> 7f3d34091ba5f01dd9579db80a8c7dd764f7c30a
 }
 
 .menu.active {
@@ -75,6 +82,7 @@ main .container .main-text div{
     justify-content: center;
 }
 
+<<<<<<< HEAD
 
 
 /* diferences */
@@ -86,6 +94,35 @@ main .container .main-text div{
 }
 
 .diferences .container-cards .home-text{
+=======
+/* end main */
+
+/* results 
+
+.results .container{
+    flex-direction: column;
+}
+
+.results .results-text, 
+.results .results-number{
+    width: 100%;
+    text-align: center;
+}
+
+.results .results-number{
+    margin-top: 30px;
+}
+
+*/
+
+/* diferences */
+
+.diferences .container{
+    flex-direction: column;
+}
+
+.diferences .title-container{
+>>>>>>> 7f3d34091ba5f01dd9579db80a8c7dd764f7c30a
     text-align: center;
 
 }
@@ -189,6 +226,13 @@ main .container .main-text div{
         font-size: 20px;
     }
 
+<<<<<<< HEAD
+=======
+    .results .results-number{
+        flex-direction: column;
+    }
+
+>>>>>>> 7f3d34091ba5f01dd9579db80a8c7dd764f7c30a
     main .container .main-text{
         width: 100%;
         margin: 100px 0;
