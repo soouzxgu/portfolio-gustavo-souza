@@ -272,10 +272,11 @@ main .container{
     display: flex;
     justify-content: space-between;
     margin-top: 5%;
+    gap: 30px;
 }
 
 .places .card-places .card-items{
-    width: 30%;
+    width: 100%;
     text-align: center;
     padding: 200px 20px;
     border-radius: 20px;
@@ -288,7 +289,7 @@ main .container{
     justify-content: center;
 }
 
-.places .card-items:hover {
+.places .card-items:hover{
     transform: scale(1.02);
 }
 
@@ -305,12 +306,7 @@ main .container{
 
 .places .card-places .card-items:hover img {
     transition: transform 0.6s ease-in-out;
-    filter: brightness(0.8);
-}
-
-.places .card-items .home-local{
-    margin: 20px 0;
-    color: var(--color-p);
+    background-color: #3869d1;
 }
 
 .places .card-items .home-name{
